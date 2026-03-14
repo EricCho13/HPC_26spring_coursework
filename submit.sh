@@ -18,7 +18,8 @@ srun -N 1 -n 1   --cpu-bind sockets ./mpi_pow 112000 100000 0
 srun -N 1 -n 7   --cpu-bind sockets ./mpi_pow 112000 100000 0
 srun -N 1 -n 14  --cpu-bind sockets ./mpi_pow 112000 100000 0
 srun -N 1 -n 28  --cpu-bind sockets ./mpi_pow 112000 100000 0
-srun -N 2 -n 56  --cpu-bind sockets ./mpi_pow 112000 100000 0
+# srun -x conv1 -N 2 -n 56  --cpu-bind sockets ./mpi_pow 112000 100000 0
+srun -w conv3,conv4 -N 2 -n 56 --cpu-bind sockets ./mpi_pow 112000 100000 0
 
 echo All done!
 
