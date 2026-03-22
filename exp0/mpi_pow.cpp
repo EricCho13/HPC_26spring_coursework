@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
 
         for (int i = 0; i < n; i++)
             root_a[i] = rand() % 1024;
-    }
+    }  
 
     // 开始计时
     MPI_Barrier(MPI_COMM_WORLD);
